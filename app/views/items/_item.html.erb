@@ -1,2 +1,26 @@
-<p> <%=  item.content  %></p>
-<%= link_to "Borrar", todo_list_item_path(@todo_list, item.id), method: :delete, data: { confirm: "Estas Seguro?"} %>
+<div class="row clearfix">
+  <% if item.completed? %>
+    <div class="complete">
+      <%= link_to "Ha sido completada", complete_todo_list_item_path(@todo_list, item.id), method: :patch %>
+    </div>
+    <div class="todo_item">
+      <p style="opacity: 0.4;"><strike><%= item.content %></strike></p>
+    </div>
+    <div class="trash">
+      <%= link_to "Borrar", todo_list_item_path(@todo_list, item.id), method: :delete, data: { confirm: "¿Estas Seguro?"} %>
+    </div>
+
+    <% else %>
+
+    <div class="complete">
+      <%= link_to "Ha sido completada", complete_todo_list_item_path(@todo_list, item.id), method: :patch %>
+    </div>
+    <div class="todo_item">
+      <p><%= item.content %></p>
+    </div>
+    <div class="trash">
+      <%= link_to "Borrar", todo_list_item_path(@todo_list, item.id), method: :delete, data: { confirm: "¿Estas Seguro?"} %>
+    </div>
+  <% end %>
+
+</div>
