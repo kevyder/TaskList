@@ -1,21 +1,16 @@
 <p id="notice"><%= notice %></p>
+<h2 class="todo_list_title"> <%= @todo_list.title %></h2>
+<p class="subtitle"><%= @todo_list.description %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @todo_list.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @todo_list.description %>
-</p>
-
-<div id="items_wrapper">
+<div id="todo_items_wrapper">
   <%= render @todo_list.item%>
   <div id="form">
     <%= render "items/form" %>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', todo_lists_path %>
+<div class="links">
+  <%= link_to ' Editar ', edit_todo_list_path(@todo_list) %>|
+  <%= link_to ' Borrar ', todo_list_path(@todo_list), method: :delete, data: {confirm:"¿Estas seguro?"} %>|
+  <%= link_to ' Inicio ', todo_lists_path %>
+</div>
