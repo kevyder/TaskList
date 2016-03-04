@@ -1,0 +1,4 @@
+<%= form_for ([@todo_list, @todo_list.item.build]) do |f| %>
+  <%= f.text_field :content, placeholder: "Nueva Tarea" %>
+  <%= f.submit %>
+<% end %>

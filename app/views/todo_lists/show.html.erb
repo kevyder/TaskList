@@ -10,5 +10,12 @@
   <%= @todo_list.description %>
 </p>
 
+<div id="items_wrapper">
+  <%= render @todo_list.item%>
+  <div id="form">
+    <%= render "items/form" %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
 <%= link_to 'Back', todo_lists_path %>
