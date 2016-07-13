@@ -8,4 +8,4 @@ Se utilizó:
 
 * PostgreSQL o SQLite3
 
-Link del proyecto: 	goo.gl/SyrYgR
+Link del proyecto: 	http://goo.gl/SyrYgR
