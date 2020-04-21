@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '5.2.2'
+gem 'rails', '6.0.2'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -14,6 +14,6 @@ group :production do
   gem 'rails_12factor'
 end
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.0'
+  gem 'sqlite3', '~> 1.4.1'
 end
-ruby "2.2.2"
+ruby "2.5.5"
