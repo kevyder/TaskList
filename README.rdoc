@@ -4,7 +4,9 @@
 
 Se utilizó:
 
-* Ruby on Rails '4.1.8'
+* Ruby 2.5.5
+
+* Ruby on Rails '6.0.2'
 
 * PostgreSQL o SQLite3
 
